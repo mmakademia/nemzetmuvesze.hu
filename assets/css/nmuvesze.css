@@ -51,7 +51,15 @@ body {
 	A navbar kódja #9f4826
 
 */
+.navbar {
+    background-color: #9f4826;
+}
 
+.navbar-default .navbar-text a {
+    color: #FFF;
+}
+
+/* end bottom */
 .mainmenu {
     z-index: 999999;
     width: 100%;
@@ -149,7 +157,7 @@ body {
 }
 @media (min-width: 768px) {
     .section {
-        padding-top: 160px;
+        padding-top: 60px;
     }
 }
 /* Show one of sections */
