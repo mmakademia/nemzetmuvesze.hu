@@ -21,6 +21,15 @@ body {
 	font-weight: normal;
 }
 
+/*
+	main IMG
+*/
+
+.nmlogo img {
+	padding-top: 10em;
+	width: 100%
+}
+
 
 /********************************************************/
 /*                    Navigation bar                    */
