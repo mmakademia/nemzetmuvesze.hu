@@ -1,3 +1,5 @@
+<img src="http://www.mma.hu/documents/10180/5771699/MMAlogoC_1_haromsoros_szeles.png/1d396341-9539-4065-9b40-ad50cbf694e9?t=1411637513000";"/>
+
 http://www.mma.hu/az-akademia/-/event/10180/a-nemzet-muvesze-dij
 
 Az Országgyűlés a magyar művészeti élet kimagasló teljesítményt nyújtó, leginkább elismert – megelőzőleg Kossuth-díjban részesített és 65. életévét, táncművész, valamint cirkuszművész esetében 50. életévét betöltött – képviselőinek személyes megbecsülése, méltó életkörülményeinek biztosítása céljából alapította a Nemzet Művésze díjat 2013-ban. (Jogszabályi helyek: MMA tv. 28/A. § – 28/K. §-ok; Alapszabály 1. számú melléklete.)
