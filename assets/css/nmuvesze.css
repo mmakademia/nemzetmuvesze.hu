@@ -212,9 +212,18 @@ a:hover, a:active {
 }
 .subtitle {
     line-height: .9em;
-    font-size: 5.5em;
+    font-size: 3em;
     margin-top: 0;
     margin-bottom: 40px;
+}
+
+.subtitle h3 {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    font-size: 4em;
+    margin-bottom: 40px;
+    color: rgb(85, 85, 85);
+    line-height: 1em;
 }
 .tagline {
     font-size: 1.4em;

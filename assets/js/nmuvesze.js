@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
         return false;
     });
 
-    // auto toggle navbar - fuck it!
+    // auto toggle navbar
     $('.nav a').on('click', function() {
         $(".navbar-toggle").click()
     });
