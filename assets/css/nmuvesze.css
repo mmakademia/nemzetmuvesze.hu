@@ -51,7 +51,19 @@ body {
 	A navbar kódja #9f4826
 
 */
+.navbar {
+    background-color: #a21f4b;
+}
 
+.navbar-default .navbar-text a {
+    color: #FFF;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFF;
+}
+
+/* end bottom */
 .mainmenu {
     z-index: 999999;
     width: 100%;
@@ -149,7 +161,7 @@ body {
 }
 @media (min-width: 768px) {
     .section {
-        padding-top: 160px;
+        padding-top: 60px;
     }
 }
 /* Show one of sections */
@@ -178,7 +190,7 @@ a:hover, a:active {
     font-family: 'EB Garamond', serif;
     font-weight: normal;
     font-size: 4.5em;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     color: rgb(85, 85, 85);
     line-height: 1em;
 }
