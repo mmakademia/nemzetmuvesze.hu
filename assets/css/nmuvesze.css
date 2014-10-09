@@ -59,6 +59,7 @@ body {
     color: #FFF;
 }
 
+
 .navbar-inverse {
 background-color: #DAD4D4;
 border-color: #ADADAD;
@@ -71,6 +72,10 @@ border-color: #ADADAD;
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
 color: #555555;
 background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+background-color: #333;
 }
 
 
@@ -335,7 +340,7 @@ a:hover, a:active {
     color: #000
 }
 .theme-invert .navbar-toggle {
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.15);
 }
 .theme-invert .navbar-toggle .icon-bar {
     background: #333;
@@ -351,10 +356,10 @@ a:hover, a:active {
     color: rgb(85, 85, 85);
 }
 .theme-invert .btn-default {
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .2);
 }
 .theme-invert .btn-default:hover, .theme-invert .btn-default:focus, .theme-invert .btn-default:active, .theme-invert .btn-default.active {
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .2);
     color: #fff;
 }
 .theme-invert .btn-primary {
