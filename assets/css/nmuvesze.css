@@ -52,10 +52,14 @@ body {
 
 */
 .navbar {
-    background-color: #9f4826;
+    background-color: #a21f4b;
 }
 
 .navbar-default .navbar-text a {
+    color: #FFF;
+}
+
+.navbar-inverse .navbar-nav>li>a {
     color: #FFF;
 }
 
@@ -186,7 +190,7 @@ a:hover, a:active {
     font-family: 'EB Garamond', serif;
     font-weight: normal;
     font-size: 4.5em;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     color: rgb(85, 85, 85);
     line-height: 1em;
 }
