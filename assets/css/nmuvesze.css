@@ -32,7 +32,7 @@ body {
 /*
 	Flag
 */
-/*
+
 .flag {
 	position: fixed;
 	right: 0px;
@@ -42,7 +42,7 @@ body {
 .flag img {
 	height: 15rem;
 }
-*/
+
 /********************************************************/
 /*                    Navigation bar                    */
 /********************************************************/
@@ -51,17 +51,28 @@ body {
 	A navbar kódja #9f4826
 
 */
-.navbar {
+/*.navbar {
     background-color: #a21f4b;
 }
 
 .navbar-default .navbar-text a {
     color: #FFF;
 }
-
-.navbar-inverse .navbar-nav>li>a {
-    color: #FFF;
+*/
+.navbar-inverse {
+background-color: #DAD4D4;
+border-color: #ADADAD;
 }
+
+.navbar-inverse .navbar-nav>li> a {
+    color: #101010;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+color: #555555;
+background-color: transparent;
+}
+
 
 /* end bottom */
 .mainmenu {
