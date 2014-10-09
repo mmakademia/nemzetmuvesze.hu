@@ -51,14 +51,14 @@ body {
 	A navbar kódja #9f4826
 
 */
-/*.navbar {
+.navbar {
     background-color: #a21f4b;
 }
 
 .navbar-default .navbar-text a {
     color: #FFF;
 }
-*/
+
 .navbar-inverse {
 background-color: #DAD4D4;
 border-color: #ADADAD;
