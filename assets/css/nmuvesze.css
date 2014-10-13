@@ -44,123 +44,6 @@ body {
 }
 
 /********************************************************/
-/*                    Navigation bar                    */
-/********************************************************/
-/*
-
-	A navbar kódja #9f4826
-
-*/
-.navbar {
-    background-color: #a21f4b;
-}
-
-.navbar-default .navbar-text a {
-    color: #FFF;
-}
-
-
-.navbar-inverse {
-background-color: #DAD4D4;
-border-color: #ADADAD;
-}
-
-.navbar-inverse .navbar-nav>li> a {
-    color: #101010;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-color: #555555;
-background-color: transparent;
-}
-
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-background-color: #333;
-}
-
-
-/* end bottom */
-.mainmenu {
-    z-index: 999999;
-    width: 100%;
-    padding: 30px 0 0 0;
-}
-@media (min-width: 768px) {
-    .mainmenu {
-        position: fixed;
-    }
-}
-.navbar-toggle {
-    position: relative;
-    float: left;
-    display: block;
-    padding: 9px 10px;
-    background: #9f4826;
-    background-image: none;
-    border: 0 none;
-    top: 0px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    outline: 0;
-    opacity: 1;
-    -webkit-transition: all .45s;
-    -moz-transition: all .45s;
-    transition: all .45s;
-    float: left;
-}
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #9f4826;
-    ;
-}
-.navbar-toggle .icon-bar + .icon-bar {
-    margin-top: 4px;
-}
-.open .navbar-toggle {
-    top: -70px;
-    opacity: 0;
-}
-.mainmenu .dropdown-menu {
-    top: -14em;
-    left: 0px;
-    font-size: 13px;
-    padding: 0;
-    background: none;
-    border: 0 none;
-    border-radius: 2px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    display: block;
-    opacity: 0;
-    -webkit-transition: all .45s;
-    -moz-transition: all .45s;
-    transition: all .45s;
-}
-.mainmenu .dropdown-menu .active {
-    font-weight: bold;
-}
-.mainmenu .open .dropdown-menu {
-    top: 2px;
-    opacity: 1;
-}
-.mainmenu .dropdown-menu a {
-    padding: 10px 10px;
-    margin: 0;
-    color: white;
-    text-decoration: none;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-}
-.mainmenu .dropdown-menu a:hover {
-    background: rgba(255, 255, 255, .1);
-    color: white;
-    padding: 10px 8px 10px 12px;
-}
-/********************************************************/
 /*             Sections - universal classes             */
 /********************************************************/
 
@@ -185,6 +68,41 @@ background-color: #333;
 #head {
     display: block;
 }
+
+/********************************************************/
+/*                      Navigation                      */
+/********************************************************/
+
+.navbar {
+    background-color: #CECECE;
+}
+
+.navbar-default .navbar-text a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+color: #000;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+color: #696969;
+}
+
+.navbar-inverse {
+background-color: #d6d6d6;
+border-color: #969696;
+}
+
+.theme-invert .navbar-toggle .icon-bar {
+background: #6B6B6B;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+background-color: #AFAFAF;
+}
+
+
+
 /********************************************************/
 /*                      Typography                      */
 /********************************************************/
