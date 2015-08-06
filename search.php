@@ -2,44 +2,44 @@
 /**
  * The template for displaying search results pages.
  *
- * @package brosco
+ * @package WordPress
+ * @subpackage FoundationPress
+ * @since FoundationPress 1.0.0
  */
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="row">
+	<div class="small-12 large-8 columns" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php do_action( 'foundationpress_before_content' ); ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'brosco' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+		<h2><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', get_post_format() ); ?>
+		<?php endwhile; ?>
 
-			<?php endwhile; ?>
-			<div class="container">
-			<?php brosco_paging_nav(); ?>
-			</div>
 		<?php else : ?>
-
 			<?php get_template_part( 'content', 'none' ); ?>
 
-		<?php endif; ?>
+	<?php endif;?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	<?php do_action( 'foundationpress_before_pagination' ); ?>
 
-<?php get_sidebar(); ?>
+	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+		</nav>
+	<?php } ?>
+
+	<?php do_action( 'foundationpress_after_content' ); ?>
+
+	</div>
+	<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

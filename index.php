@@ -1,48 +1,51 @@
 <?php
 /**
- * The main template file.
+ * The main template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * e.g., it puts together the home page when no home.php file exists.
  *
- * @package brosco
+ * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+ *
+ * @package WordPress
+ * @subpackage FoundationPress
+ * @since FoundationPress 1.0.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="row">
+	<div class="small-12 large-8 columns" role="main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php do_action( 'foundationpress_before_content' ); ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', get_post_format() ); ?>
+		<?php endwhile; ?>
 
-			<?php endwhile; ?>
-
-			<div class="container">
-			<?php brosco_paging_nav(); ?>
-			</div>
 		<?php else : ?>
-
-
 			<?php get_template_part( 'content', 'none' ); ?>
 
-		<?php endif; ?>
+		<?php do_action( 'foundationpress_before_pagination' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<?php endif;?>
 
-<?php get_sidebar(); ?>
+
+
+	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+		</nav>
+	<?php } ?>
+
+	<?php do_action( 'foundationpress_after_content' ); ?>
+
+	</div>
+	<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

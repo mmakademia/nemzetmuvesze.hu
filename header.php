@@ -1,63 +1,53 @@
 <?php
 /**
- * The header for our theme.
+ * The template for displaying the header
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the head element and everything up until the "container" div.
  *
- * @package brosco
+ * @package WordPress
+ * @subpackage FoundationPress
+ * @since FoundationPress 1.0.0
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<!-- google fonts -->
-<link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<!-- /google fonts -->
+?>
+<!doctype html>
+<html class="no-js" <?php language_attributes(); ?> >
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<?php wp_head(); ?>
-</head>
+		<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
+		
+		<?php wp_head(); ?>
+	</head>
+	<body <?php body_class(); ?>>
+	<?php do_action( 'foundationpress_after_body' ); ?>
+	
+	<div class="off-canvas-wrap" data-offcanvas>
+	<div class="inner-wrap">
+	
+	<?php do_action( 'foundationpress_layout_start' ); ?>
+	
+	<nav class="tab-bar">
+		<section class="left-small">
+			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+		</section>
+		<section class="middle tab-bar-section">
+			
+			<h1 class="title">
+				<?php bloginfo( 'name' ); ?>
+			</h1>
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'brosco' ); ?></a>
+		</section>
+	</nav>
 
+	<?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="header-inside">
+	<?php get_template_part( 'parts/top-bar' ); ?>
 
-<div class="logo">
-<?php if ( get_theme_mod( 'brosco_logo' ) ) : ?>
-
-
-
-
-		<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'brosco_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
-
-		<?php else : ?>
-
-
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-
-			<?php endif; ?>
-
-		</div>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'brosco' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-
-</div>
-
-	</header><!-- #masthead -->
-
-
-
-	<div id="content" class="site-content">
+<section class="container" role="document">
+	<?php do_action( 'foundationpress_after_header' ); ?>

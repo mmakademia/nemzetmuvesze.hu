@@ -1,32 +1,26 @@
 <?php
 /**
- * @package brosco
+ * The default template for displaying content
+ *
+ * Used for both single and index/archive/search.
+ *
+ * @package WordPress
+ * @subpackage FoundationPress
+ * @since FoundationPress 1.0.0
  */
+
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry'); ?>>
-   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-   </a>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header>
+		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<?php foundationpress_entry_meta(); ?>
+	</header>
 	<div class="entry-content">
-			<header class="entry-header">
-
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-		<?php if ( has_post_thumbnail() ) : ?>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-	<?php the_post_thumbnail('category-thumb'); ?>
-	</a>
-<?php endif; ?>
-		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'brosco' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'brosco' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
+	</div>
+	<footer>
+		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
+	</footer>
+	<hr />
+</article>
