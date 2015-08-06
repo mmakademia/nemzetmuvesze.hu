@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Daily - theme documentation</title>
+
+<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 7]>
+	<script src="js/IE8.js" type="text/javascript"></script><![endif]-->
+<!--[if lt IE 7]>
+
+	<link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
+</head>
+
+<body id="index" class="home">
+<div class="container">
+<p class="theme-documentation">Theme documentation</p>
+<h1>Daily</h1>
+
+<p>Simple and clean WordPress theme perfect for photographers and bloggers who are into minimal aesthetics. <br>Hand crafted by <a href="http://www.robertbrodziak.com">Robert Brodziak</a>.</p>
+
+<div class="section tableofcontents">
+
+	<h2>Table of Contents</h2>
+	<ol>
+		<li><a href="#section-01">Getting started</a></li>
+		<li><a href="#section-02">Intro section</a></li>
+		<li><a href="#section-03">Header</a></li>
+		<li><a href="#section-04">Blog</a></li>
+		<li><a href="#section-05">Footer widgets</a></li>
+		<li><a href="#section-06">Customization</a></li>
+
+
+
+
+
+	</ol>
+
+</div><!-- /section -->
+
+	<div id="section-01" class="section">
+	<h2>1. Getting Started</h2>
+		<p>Before you start working with this theme, make sure that you have WordPress already installed on your server.</p>
+
+<h3>1.1 Installation</h3>
+<p>To install a theme, you must first upload the theme files and then activate the theme in WordPress admin panel. Use one of this 2 options:</p>
+<ul>
+<li>WordPress Upload: Navigate to Appearance > Add New Themes > Upload. Go to browse, and select the zipped theme folder. Hit “Install Now” and the theme will be uploaded and installed.</li>
+<li>FTP Upload: Using your FTP program, upload the non-zipped theme folder into the /wp-content/themes/ folder on your server.</li>
+
+</ul>
+
+<p>Once the theme is uploaded, go to Appearance > Themes and activate your new theme.</p>
+
+
+<h3>1.2 Settings</h3>
+<p>Go to Settings > Reading and set Front page to display your latest posts. While being here you can set how many post should be presented on each blog page.</p>
+<p>Go to Users > Your Profile and uncheck "Show Toolbar when viewing site". It's important, because with WordPress toolbar enabled, sometimes there is unwanted padding under the navigation bar.</p>
+<p>I recommend to change Permalinks in Settings > Permalinks to some other option than default. Typically I use Post name.</p>
+
+<h3>1.3 Polish characters</h3>
+<p>If you are building site in Polish language, or need some additional Latin Extended characters go to Editor, chose header.php from the file list and change this fragment of code:</p>
+<p class="raw-code"><!-- google fonts -->
+&lt;link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic' rel='stylesheet' type='text/css'&gt;<br />
+&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'&gt;
+<!-- /google fonts --></p>
+<p>to this:</p>
+
+<p class="raw-code"><!-- google fonts -->
+&lt;link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'&gt;<br />
+&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'&gt;
+<!-- /google fonts -->
+	</div><!-- /section -->
+
+
+	<div id="section-02" class="section">
+	<h2>2. Intro section</h2>
+		<p>Intro is a fullscreen section, which people visiting your website will see first. To create this section, go to Intro > Add New. Please create only 1 intro, because theme is developed in a way, that it could show only 1 section like that.</p>
+		<p>You can enter your welcome text, and upload background photo now. Make sure that image is in landscape view, and have proportions similar to 16:9. Photo used in demo has a resolution of 1920px x 1200px.</p>
+		<p>If your image is light, you can choose darker color of text and button.</p>
+		<p>If you just need a simple blog, without intro section - just don't create one, it's that simple.</p>
+	</div><!-- /section -->
+
+
+
+	<div id="section-03" class="section">
+	<h2>3. Header</h2>
+	<h3>3.1 Site title</h3>
+		<p>You can enter title of your site, and tagline in Settings > General. If you don't need a tagline, leave the field empty, and your title will magically center itself in the header.</p>
+		<h3>3.2 Logo</h3>
+		<p>Instead of using title as a text, there is also an option to upload custom logo. If that's what you prefer, go to Apperance > Customize. Expand Logo section and upload your image. It is recommended that your logo height won't be higher than 40px. Remember to click save button.
+		</p>
+		<h3>3.2 Navigation</h3>
+		<p>Before you can create menu, remember that first you need to publish some content. Create some pages, publish some posts. If you have some content already published, go to Apperance > Menus and create your new menu there.
+		</p>
+		<p><strong>Tip:</strong> To create Home in menu use Links panel, enter your website url (http://www.yourwebsite.com), and enter Home as Link Text.
+		</p>
+		<p><strong>Tip:</strong> If you want to show blog categories under the dropdown menu (Categories > Category 1, Category 2 etc.) - use Links panel, enter # as url, and Categories as Link Text. Add selected categories under just created menu item (move them slightly to the right). Remove # from firstly created item.
+		</p>
+
+	</div><!-- /section -->
+
+
+	<div id="section-04" class="section">
+	<h2>3. Blog</h2>
+	<h3>3.1 Image size</h3>
+		<p>It is recommended, that blog post images, and featured image will have a width of at least 820px. 820px is the width of the site, so the images will occupy whole available space, and align nicely with other elements.</p>
+		<h3>3.2 Lightbox</h3>
+		<p>This theme has integrated lightbox feature. If you have large images and want to show them in bigger size when clicked:</p>
+		<ul>
+		<li>click "Add media" in post editing screen, upload your image</li>
+		<li>set "Link to" -> Media File, and "Size" -> Full size</li>
+		</ul>
+
+		<p>If you don't need lightbox feature, choose "Link to" -> none, when adding new images.</p>
+		<h3>3.3 Categories</h3>
+		<p>Categories, assigned to posts, will show under the excerpt on the blog page. If you don't want to display them, uncheck "Show post category" in post editing screen.
+		</p>
+		<h3>3.4 Excerpt</h3>
+		<p>To show post summary on main blog page, please use Excerpt field in post editing screen. If you don't see that field, go to Screen options (at the top), and check "Excerpt".
+		</p>
+
+
+	</div><!-- /section -->
+
+	<div id="section-05" class="section">
+	<h2>5. Footer widgets</h2>
+		<p>Daily comes with 3 widget ready footer areas. You can insert widgets in Apperance > Widgets, using Footer 1, 2 and 3 panels.</p>
+
+	</div><!-- /section -->
+
+
+
+
+	<div id="section-06" class="section">
+	<h2>6. Customization</h2>
+		<p>Daily is free theme, that's why I'm not able to provide any kind of support with it. However, if you have, or plan to built a site with it and need some customisation, I'm available for paid work.</p>
+		<p>If that's the case, please send me an email to themes@robertbrodziak.com</p>
+
+	</div><!-- /section -->
+
+	<div id="section-07" class="section">
+		<p>Like this theme? Follow me on <a href="http://twitter.com/brodziakstudio">Twitter</a> for updates and news about new upcoming themes.</p>
+		<h2><a href="http://twitter.com/brodziakstudio">@brodziakstudio</a></h2>
+		<p>I'm also available on <a href="http://www.behance.net/brodziak">Behance</a> and <a href="http://dribbble.com/brodziak">Dribbble</a>.</p>
+
+	</div><!-- /section -->
+
+</div><!-- /container -->
+
+
+</body>
+</html>
